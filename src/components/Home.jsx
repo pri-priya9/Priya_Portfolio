@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -23,16 +24,16 @@ const Home = () => {
             I am a <span className="font-semibold text-blue-500">Web Developer</span> with <span className="font-semibold text-blue-500" >+3</span> years of experience.
           </p>
           <div className="flex justify-center md:justify-start space-x-4">
-            <a href="https://www.canva.com/design/DAGeZAwP6RU/mYIjvNCzESoTbd6iEK53EQ/view?utm_content=DAGeZAwP6RU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hcd7f3cfcd0" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.canva.com/design/DAGhBkmNZNQ/9pUKd-Lank8JU5PDIedz2g/view?utm_content=DAGhBkmNZNQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h49b1cd1c8b" target="_blank" rel="noopener noreferrer">
               <button className="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300">
                 View Resume
               </button>
             </a>
-            <a href="https://hiring-priya9.netlify.app/">
+            <Link to='/hire-me'>
               <button className="bg-transparent border-2 border-blue-500 text-blue-500 py-2 px-6 rounded-full hover:bg-blue-500 hover:text-white transition duration-300">
                 Hire Me
               </button>
-            </a>
+           </Link>
           </div>
         </div>       
       </div>
