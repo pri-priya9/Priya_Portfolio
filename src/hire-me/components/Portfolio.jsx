@@ -52,7 +52,7 @@ const Portfolio = () => {
           rel="noopener noreferrer"
           className="text-blue-500 hover:underline text-lg font-semibold"
         >
-          Read More
+          Explore More Projects
         </a>
       </div>
     </section>

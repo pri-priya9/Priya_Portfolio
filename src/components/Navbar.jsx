@@ -22,7 +22,10 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <div className="hidden md:flex space-x-6">
-        <button onClick={() => scrollToSection('about')} className="hover:text-blue-400">About</button>
+        <button onClick={() => scrollToSection('home')}
+        className="hover:text-blue-400">Home</button>
+        <button onClick={() => scrollToSection('about')} 
+        className="hover:text-blue-400">About</button>
         <button onClick={() => scrollToSection('education')} className="hover:text-blue-400">Education</button>
         <button onClick={() => scrollToSection('skills')} className="hover:text-blue-400">Skills</button>
         <button onClick={() => scrollToSection('projects')} className="hover:text-blue-400">Projects</button>

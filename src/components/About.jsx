@@ -1,27 +1,62 @@
-import React from 'react';
+import React from "react";
 
 const About = () => {
   return (
     <section id="about" className="py-20 bg-gray-100 text-gray-900">
       <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
-        
         <div className="mb-8 md:mb-0 md:w-1/3 flex justify-center hidden md:block">
           <img
-            src="/aboutImg.jpg"
+            src="/About.jpg"
             alt="Priya Yadav"
-            className="w-64 h-64 md:w-97 md:h-110 shadow-xl"
+            className="w-60 h-60 md:w-72 md:h-72 rounded-full object-cover object-top shadow-lg border-4 border-white"
           />
         </div>
 
-        
         <div className="md:w-2/3 text-center md:text-left">
-          <h2 className="text-3xl font-bold mb-4">About Me</h2>
-          <p className="text-lg text-gray-700">
-            Hi, I'm <span className="font-semibold">Priya</span>! Hi, my name is Priya Yadav.I completed my education up to 12th grade at Kendriya Vidyalaya, specializing in Commerce during my 11th and 12th grades. However, my passion for coding began in 10th grade, when I started learning Python. I dedicated two years to mastering <span className="text-blue-500">Python</span>, and today, I have strong expertise in this programming language.
+          <h2 className="text-3xl font-bold text-center mb-8">
+            <span className="text-black">About </span>
+            <span className="text-blue-600">Me</span>
+            <div className="w-16 h-1 bg-blue-400 mx-auto mt-2 rounded-full"></div>
+          </h2>
+          <p className="text-lg text-gray-700 space-y-4">
+            {/* 📘 1. School Journey */}
+            <span className="block mb-3">
+              Hi, I'm <span className="font-semibold">Priya Yadav</span>. I
+              completed my schooling at{" "}
+              <span className="font-medium">Kendriya Vidyalaya</span> up to 12th
+              grade, choosing <span className="font-medium">Commerce</span> as
+              my stream. However, my curiosity for coding began much earlier
+              back in 10th grade when I discovered{" "}
+              <span className="text-blue-600">Python</span>.
+            </span>
 
-Later, my interest shifted to web development, and I focused on building my skills in front-end development. Within a year, I learned <span className="text-blue-500">HTML</span>, <span className="text-blue-500">CSS</span>, <span className="text-blue-500">Javascript</span>, and <span className="text-blue-500">React.js</span>, along with <span className="text-blue-500">Tailwind CSS</span>. Currently, I’m expanding my expertise in back-end development, working with <span className="text-blue-500">Node.js</span>, <span className="text-blue-500">Express.js</span>, <span className="text-blue-500">MongoDb</span>, and <span className="text-blue-500">SQL</span>. I continuously strive to improve and upgrade my skills over time.
+            {/* 💻 2. Self-Study & Skill Growth */}
+            <span className="block mb-3">
+              Over the next two years, I deeply explored Python, building a
+              strong foundation in programming. My passion then shifted toward
+              web development. I taught myself{" "}
+              <span className="text-blue-600">HTML</span>,{" "}
+              <span className="text-blue-600">CSS</span>,{" "}
+              <span className="text-blue-600">JavaScript</span>, and{" "}
+              <span className="text-blue-600">React.js</span>, as well as
+              styling libraries like{" "}
+              <span className="text-blue-600">Tailwind CSS</span>. Currently, I
+              am expanding my knowledge in back-end development, working with{" "}
+              <span className="text-blue-600">Node.js</span> and{" "}
+              <span className="text-blue-600">TypeScript</span>, continuously
+              upgrading my skills.
+            </span>
 
-I am pursuing a BCA from IGNOU (Indira Gandhi National Open University) while actively working on large-scale projects and freelancing as a web developer. Beyond coding, I have a strong interest in business and possess a business-oriented mindset, which drives me to explore opportunities in the entrepreneurial world.
+            {/* 🎓 3. College & Projects */}
+            <span className="block">
+              I’m pursuing my Bachelor’s degree in Computer Applications (BCA)
+              from <span className="font-medium">IGNOU</span> (Indira Gandhi
+              National Open University). Alongside my studies, I actively work
+              as a freelance web developer and contribute to large-scale,
+              real-world projects. Beyond coding, I have a strong interest in
+              business and entrepreneurship, and I'm driven by a mindset to
+              build and grow in that direction.
+            </span>
           </p>
         </div>
       </div>

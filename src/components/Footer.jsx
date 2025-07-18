@@ -15,7 +15,7 @@ const Footer = () => {
             <FaGithub />
           </a>
           <a
-            href="https://instagram.com/__pri.priya9"
+            href="https://www.instagram.com/__pri.priya9?igsh=MTY5enoxYnF5cW9scw=="
             target="_blank"
             rel="noopener noreferrer"
             className="text-2xl hover:text-gray-400 transition duration-300"
