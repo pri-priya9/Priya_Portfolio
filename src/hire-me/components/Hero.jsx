@@ -7,10 +7,10 @@ const Hero = () => {
     <section className="text-center py-20 bg-gray-900 text-white">
       <h1 className="text-4xl font-bold">Hey, I'm Priya Yadav 👋</h1>
       <p className="mt-4 text-lg">
-        I'm a Web Developer Specialized in{" "}
-        <span className="text-blue-500">Frontend</span> and{" "}
-        <span className="text-blue-500">Backend</span>{" "}
-        Development.
+        I'm a Full Stack Developer Specialized in{" "}
+        <span className="text-blue-500">Frontend</span>,{" "}
+        <span className="text-blue-500">Backend</span> and {" "}
+        <span className="text-blue-500">Database</span>
       </p>
       <button
         onClick={() => setIsOpen(true)}

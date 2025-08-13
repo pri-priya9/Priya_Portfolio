@@ -2,52 +2,47 @@ import React from "react";
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 bg-gray-900 text-gray-900">
+    <section id="education" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
+        {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white">Education</h2>
-          <div className="h-1 w-24 bg-blue-400 mx-auto mt-2 relative -top-1 rounded"></div>
+          <div className="h-1 w-24 bg-blue-400 mx-auto mt-2 rounded"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Education Card 1 */}
-          <div className="education-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-blue-700 mb-1 ml-0.8">Current </h3>
-            <h2 className="text-2xl font-semibold mb-2">
+        {/* Cards in a single row */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Card 1 */}
+          <div className="bg-gray-800 p-6 rounded-lg shadow-lg border-2 border-transparent hover:border-sky-500 transition-all duration-300">
+            <h3 className="text-blue-500 mb-1">Current</h3>
+            <h2 className="text-2xl font-semibold mb-2 text-white">
               Bachelor of Computer Application{" "}
               <span className="text-blue-500">(BCA)</span>
             </h2>
             <h3 className="text-xl text-blue-500 mb-2">
               Computer Science - Indra Gandhi National Open University
             </h3>
-            {/* <p className="text-gray-700 mb-4">My Journey</p> */}
-            <span className="text-sm text-gray-500">2024 - 2027</span>
+            <span className="text-sm text-gray-300">2024 - 2027</span>
           </div>
 
-          {/* Education Card 2 */}
-          <div className="education-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-blue-700 mb-1 ml-0.8">
-              Advance Education Current Time
-            </h3>
-            <h2 className="text-2xl font-semibold mb-2">Web Development</h2>
+          {/* Card 2 */}
+          <div className="bg-gray-800 p-6 rounded-lg shadow-lg border-2 border-transparent hover:border-sky-500 transition-all duration-300">
+            <h3 className="text-blue-500 mb-1">Advance Education Current Time</h3>
+            <h2 className="text-2xl font-semibold mb-2 text-white">Web Development</h2>
             <h3 className="text-xl text-blue-500 mb-2">
               I learn this myself and also learn it online.
             </h3>
-            {/* <p className="text-gray-700 mb-4">My Journey</p> */}
-            <span className="text-sm text-gray-500">2022 - Infinity</span>
+            <span className="text-sm text-gray-300">2022 - Infinity</span>
           </div>
 
-          {/* Education Card 3 */}
-          <div className="education-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-blue-700 mb-1 ml-0.8">
-              At the time when I was at School
-            </h3>
-            <h2 className="text-2xl font-semibold mb-2">Commerce</h2>
+          {/* Card 3 */}
+          <div className="bg-gray-800 p-6 rounded-lg shadow-lg border-2 border-transparent hover:border-sky-500 transition-all duration-300">
+            <h3 className="text-blue-500 mb-1">At the time when I was at School</h3>
+            <h2 className="text-2xl font-semibold mb-2 text-white">Commerce</h2>
             <h3 className="text-xl text-blue-500 mb-2">
               Stream Commerce - Kendriya Vidyalaya Sangathan
             </h3>
-            {/* <p className="text-gray-700 mb-4">My Journey</p> */}
-            <span className="text-sm text-gray-500">2022 - 2024</span>
+            <span className="text-sm text-gray-300">2022 - 2024</span>
           </div>
         </div>
       </div>

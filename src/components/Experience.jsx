@@ -49,13 +49,13 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: "Web Development Intern",
+      title: "Full Stack Development Intern",
       company: "Aictum",
       type: "Internship",
       duration: "May 2025 - Present",
       description:
         "Working on Aictum's web development projects, focusing on responsive design and user experience.",
-      skills: ["React", "Next.js", "Tailwind CSS", "Typescript", "Node.js"],
+      skills: ["React", "Next.js", "Tailwind CSS", "Typescript", "Node.js", "python", "MongoDB"],
     },
 
     {

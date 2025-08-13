@@ -47,10 +47,7 @@ const Home = () => {
 
           <p className="text-lg text-gray-300 mb-4">
             A professional{" "}
-            <span className="font-semibold text-blue-500">Web Developer</span>{" "}
-            with
-            <span className="font-semibold text-blue-500"> 3+ years </span> of
-            experience.
+            <span className="font-semibold text-blue-500">Full Stack Developer</span>
           </p>
 
           <p className="text-lg mb-6">

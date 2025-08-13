@@ -29,6 +29,7 @@ const Navbar = () => {
         <button onClick={() => scrollToSection('education')} className="hover:text-blue-400">Education</button>
         <button onClick={() => scrollToSection('skills')} className="hover:text-blue-400">Skills</button>
         <button onClick={() => scrollToSection('projects')} className="hover:text-blue-400">Projects</button>
+        <button onClick={() => scrollToSection('recent-work')} className="hover:text-blue-400">Recent Work</button>
         {/* <button onClick={() => scrollToSection('services')} className="hover:text-blue-400">Services</button>  */}
         <button onClick={() => scrollToSection('contact')} className="hover:text-blue-400">Contact</button>
       </div>

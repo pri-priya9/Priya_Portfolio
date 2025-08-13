@@ -12,6 +12,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import HirePage from './hire-me/HirePage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import RecentWork from './components/RecentWork';
 import './App.css';
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
               <Education />
               <Skills />
               <Projects />
+              {/* <RecentWork /> */}
               <MyTech />
               {/* <Services /> */}
               <Experience />
