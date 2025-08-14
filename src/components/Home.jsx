@@ -47,7 +47,9 @@ const Home = () => {
 
           <p className="text-lg text-gray-300 mb-4">
             A professional{" "}
-            <span className="font-semibold text-blue-500">Full Stack Developer</span>
+            <span className="font-semibold text-blue-500 underline underline-offset-4 decoration-2 decoration-blue-400">
+              Full Stack Developer
+            </span>
           </p>
 
           <p className="text-lg mb-6">

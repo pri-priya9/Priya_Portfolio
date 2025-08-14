@@ -46,7 +46,7 @@ const RecentWork = () => {
     : filteredProjects.slice(0, 3);
 
   return (
-    <section id="recent-work" className="py-16 bg-gray-100 dark:bg-gray-900">
+    <section id="recent-work" className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -55,10 +55,14 @@ const RecentWork = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
-            Recent <span className="text-blue-600 dark:text-blue-400">Work</span>
+          <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Recent <span className="text-blue-600">Work</span>
+            <div className="h-1 w-24 bg-blue-500 mx-auto mt-2 rounded"></div>
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
+          </div>
+          
+          <p className="text-gray-700  max-w-2xl mx-auto mb-6">
             Here are the projects I've been working on recently. Click on any video to see detailed demonstrations.
           </p>
 
@@ -91,7 +95,7 @@ const RecentWork = () => {
               <ProjectCard key={project.id} project={project} isMobile={isMobile} />
             ))
           ) : (
-            <div className="col-span-full text-center text-gray-600 dark:text-gray-300 py-12">
+            <div className="col-span-full text-center text-gray-800 py-12">
               There are currently no Works in this category.
             </div>
           )}
