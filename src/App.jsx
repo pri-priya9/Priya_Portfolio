@@ -33,18 +33,18 @@ const App = () => {
                     <meta name="keywords" content="Priya Yadav, Full Stack Developer, React Developer, UI/UX Designer, Web Developer, JavaScript Developer, Frontend Developer, Portfolio, MERN Stack Developer, Node.js, MongoDB, Web Design, Responsive Design, Modern Web Development, Software Engineer, Frontend Engineer, Backend Developer, Web Applications, Freelance Developer, Tech Portfolio, Coding, Programming, Software Development, User Experience, User Interface, Web Technologies, Arrah, Bihar, India top 1 Developer, Best Developer in Arrah, Full Stack Engineer, Web Solutions, Arrah tech services, top developer in bihar, priyayadav, priyayadav9" />
                     <meta property="og:title" content="Priya Yadav | Full Stack Developer & UI/UX Designer" />
                     <meta property="og:description" content="Expert Full Stack Developer & UI/UX Designer specializing in modern web technologies and responsive designs." />
-                    <meta property="og:url" content="https://priya9.netlify.app/" />
-                    <meta property="og:image" content="https://priya9.netlify.app/og-image.jpg" />
+                    <meta property="og:url" content="https://priyainfo.online/" />
+                    <meta property="og:image" content="https://priyainfo.online/og-image.jpg" />
                     <meta name="twitter:title" content="Priya Yadav | Full Stack Developer" />
                     <meta name="twitter:description" content="Expert Full Stack Developer & UI/UX Designer building modern web applications." />
-                    <meta name="twitter:image" content="https://priya9.netlify.app/og-image.jpg" />
-                    <link rel="canonical" href="https://priya9.netlify.app/" />
+                    <meta name="twitter:image" content="https://priyainfo.online/og-image.jpg" />
+                    <link rel="canonical" href="https://priyainfo.online/" />
                     <script type="application/ld+json">
                       {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Person",
                         "name": "Priya Yadav",
-                        "url": "https://priya9.netlify.app/",
+                        "url": "https://priyainfo.online/",
                         "jobTitle": "Full Stack Developer & UI/UX Designer",
                         "description": "Expert Full Stack Developer specializing in React.js, Node.js, MongoDB and modern web technologies.",
                         "knowsAbout": ["React.js", "JavaScript", "Node.js", "MongoDB", "UI/UX Design", "Web Development"],
@@ -83,12 +83,12 @@ const App = () => {
                     <meta name="keywords" content="Hire Developer, Full Stack Engineer, Web Solutions, Arrah tech services, Priya Yadav, Full Stack Developer, React Developer, UI/UX Designer, Freelance Developer, Hire Full Stack Developer, Best Developer in Arrah, top developer in bihar, priyayadav, priyayadav9, Web Applications, Software Engineer" />
                     <meta property="og:title" content="Hire Priya Yadav | Full Stack Developer & UI/UX Designer" />
                     <meta property="og:description" content="Hire expert Full Stack Developer for modern web applications. Specializing in React.js, Node.js, MongoDB." />
-                    <meta property="og:url" content="https://priya9.netlify.app/hire-me" />
-                    <meta property="og:image" content="https://priya9.netlify.app/og-image.jpg" />
+                    <meta property="og:url" content="https://priyainfo.online/hire-me" />
+                    <meta property="og:image" content="https://priyainfo.online/og-image.jpg" />
                     <meta name="twitter:title" content="Hire Priya Yadav | Full Stack Developer" />
                     <meta name="twitter:description" content="Hire expert Full Stack Developer for your web projects." />
-                    <meta name="twitter:image" content="https://priya9.netlify.app/og-image.jpg" />
-                    <link rel="canonical" href="https://priya9.netlify.app/hire-me" />
+                    <meta name="twitter:image" content="https://priyainfo.online/og-image.jpg" />
+                    <link rel="canonical" href="https://priyainfo.online/hire-me" />
                   </Helmet>
                   <HirePage />
                   <Footer />
