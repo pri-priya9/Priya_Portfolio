@@ -1,13 +1,11 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { 
-  FiMessageSquare, 
-  FiLayout, 
-  FiCode, 
+import {
+  FiMessageSquare,
+  FiLayout,
+  FiCode,
   FiCheckCircle,
   FiUploadCloud, // Replaces FiRocket
-  FiLifeBuoy,
-  FiAward // Additional icon if needed
+  FiLifeBuoy
 } from "react-icons/fi";
 
 const WorkProcess = () => {

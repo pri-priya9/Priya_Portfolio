@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   FaCode,
@@ -44,7 +44,7 @@ const Home = () => {
         {/* Content Section */}
         <div className="text-center md:text-left md:w-1/2 md:-mt-30">
           <h2 className="text-lg text-blue-400 font-semibold mb-2 tracking-wide">
-            Hello I'm
+            Hello I&apos;m
           </h2>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-4">

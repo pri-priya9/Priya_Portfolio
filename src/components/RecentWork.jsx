@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import { FiPlay, FiPause, FiVolume2, FiVolumeX, FiMaximize, FiMinimize, FiChevronDown } from 'react-icons/fi';
 
@@ -63,7 +64,7 @@ const RecentWork = () => {
           </div>
           
           <p className="text-gray-700  max-w-2xl mx-auto mb-6">
-            Here are the projects I've been working on recently. Click on any video to see detailed demonstrations.
+            Here are the projects I&apos;ve been working on recently. Click on any video to see detailed demonstrations.
           </p>
 
           {/* Category Filters */}
@@ -221,7 +222,7 @@ const ProjectCard = ({ project, isMobile }) => {
     setIsDragging(true);
   };
 
-  const handleProgressBarMouseMove = (e) => {
+  const handleProgressBarMouseMove = useCallback((e) => {
     if (!isDragging || !progressBarRef.current) return;
     
     const rect = progressBarRef.current.getBoundingClientRect();
@@ -229,7 +230,7 @@ const ProjectCard = ({ project, isMobile }) => {
     pos = Math.max(0, Math.min(1, pos)); // Clamp between 0 and 1
     
     videoRef.current.currentTime = pos * videoRef.current.duration;
-  };
+  }, [isDragging]);
 
   const handleProgressBarMouseUp = () => {
     setIsDragging(false);
@@ -254,7 +255,7 @@ const ProjectCard = ({ project, isMobile }) => {
       document.removeEventListener('mouseup', handleProgressBarMouseUp);
       clearTimeout(controlsTimeoutRef.current);
     };
-  }, [isDragging]);
+  }, [isDragging, handleProgressBarMouseMove]);
 
   useEffect(() => {
     const handleFullscreenChange = () => {
@@ -443,6 +444,17 @@ const ProjectCard = ({ project, isMobile }) => {
       </div>
     </motion.div>
   );
+};
+
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    videoUrl: PropTypes.string,
+    thumbnail: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    category: PropTypes.string,
+  }).isRequired,
+  isMobile: PropTypes.bool.isRequired,
 };
 
 export default RecentWork;

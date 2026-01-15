@@ -166,7 +166,7 @@ const Testimonials = () => {
                                             <p className="text-sm text-gray-500">{feedback.date}</p>
                                         </div>
                                     </div>
-                                    <p className="italic text-gray-700 mb-4">"{feedback.text}"</p>
+                                    <p className="italic text-gray-700 mb-4">&quot;{feedback.text}&quot;</p>
                                     <div className="flex items-center">
                                         {[...Array(5)].map((_, i) => (
                                             <svg

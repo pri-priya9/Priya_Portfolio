@@ -1,5 +1,3 @@
-import React from "react";
-
 const About = () => {
   return (
     <section id="about" className="py-20 bg-gray-100 text-gray-900">
@@ -21,7 +19,7 @@ const About = () => {
           <p className="text-lg text-gray-700 space-y-4">
             {/* 📘 1. School Journey */}
             <span className="block mb-3">
-              Hi, I'm <span className="font-semibold">Priya Yadav</span>. I
+              Hi, I&apos;m <span className="font-semibold">Priya Yadav</span>. I
               completed my schooling at{" "}
               <span className="font-medium">Kendriya Vidyalaya</span> up to 12th
               grade, choosing <span className="font-medium">Commerce</span> as
@@ -54,7 +52,7 @@ const About = () => {
               National Open University). Alongside my studies, I actively work
               as a freelance web developer and contribute to large-scale,
               real-world projects. Beyond coding, I have a strong interest in
-              business and entrepreneurship, and I'm driven by a mindset to
+              business and entrepreneurship, and I&apos;m driven by a mindset to
               build and grow in that direction.
             </span>
           </p>

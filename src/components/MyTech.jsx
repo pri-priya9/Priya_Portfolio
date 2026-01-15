@@ -1,10 +1,8 @@
-import React from "react";
 import { FaPython, FaReact, FaNodeJs } from "react-icons/fa";
 import {
   SiTypescript,
   SiNextdotjs,
   SiTailwindcss,
-  SiExpress,
   SiMongodb,
   SiJavascript,
 } from "react-icons/si";

@@ -82,10 +82,10 @@ const Hero = () => {
           className="text-center"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            Hey, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Priya </span> 👋
+            Hey, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Priya </span> 👋
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-            I'm a Full Stack Developer specialized in{" "}
+            I&apos;m a Full Stack Developer specialized in{" "}
             <span className="text-blue-400 font-medium">Frontend</span>,{" "}
             <span className="text-blue-400 font-medium">Backend</span>, and{" "}
             <span className="text-blue-400 font-medium">Database</span>
@@ -142,7 +142,7 @@ const Hero = () => {
                   </motion.div>
                 ) : (
                   <>
-                    <h2 className="text-xl font-bold mb-4 text-center text-gray-800">Let's Work Together</h2>
+                    <h2 className="text-xl font-bold mb-4 text-center text-gray-800">Let&apos;s Work Together</h2>
                     <form onSubmit={handleSubmit}>
                       <div className="mb-4">
                         <label className="block text-gray-700 font-medium mb-1 flex items-center text-sm">
