@@ -1,12 +1,16 @@
-import { FaPython, FaReact, FaNodeJs } from "react-icons/fa";
+import { FaPython, FaReact, FaNodeJs, FaHtml5 , FaGithub , FaDatabase } from "react-icons/fa";
 import {
   SiTypescript,
   SiNextdotjs,
   SiTailwindcss,
   SiMongodb,
   SiJavascript,
+  SiExpress,
+  SiAppwrite,
+  SiRedux 
 } from "react-icons/si";
 import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const itemVariants = {
   hidden: { y: 30, opacity: 0 },
@@ -21,19 +25,28 @@ const itemVariants = {
 };
 
 const techStack = [
-  { icon: <FaPython className="text-green-500" />, name: "Python" },
+  { icon: <FaHtml5 className="text-orange-400" />, name: "HTML5" },
   { icon: <SiJavascript className="text-yellow-500" />, name: "Javascript" },
   { icon: <FaReact className="text-blue-400" />, name: "React.js" },
   { icon: <SiTailwindcss className="text-cyan-400" />, name: "Tailwind CSS" },
+  { icon: <SiRedux className="text-purple-600" />, name: "Redux" },
+  { icon: <FaPython className="text-green-500" />, name: "Python" },
   { icon: <SiTypescript className="text-blue-500" />, name: "TypeScript" },
-  { icon: <SiNextdotjs className="text-gray-100" />, name: "Next.js" },
+  { icon: <SiNextdotjs className="text-white" />, name: "Next.js" },
   { icon: <FaNodeJs className="text-green-500" />, name: "Node.js" },
   { icon: <SiMongodb className="text-green-600" />, name: "MongoDB" },
+  { icon: <SiExpress className="text-white" />, name: "Express.js" },
+  { icon: <FaGithub className="text-white" />, name: "GitHub" },
+  { icon: <FaDatabase className="text-blue-500" />, name: "SQL" },
+  { icon: <SiAppwrite className="text-pink-600" />, name: "Appwrite" },
 ];
 
+
 const MyTech = () => {
+  const sectionRef = useRef(null);
   return (
-    <div className="w-full py-12 md:py-8 bg-gray-900">
+    <section id="skills"  ref={sectionRef}>
+    <div className="w-full py-12 md:py-8 bg-gray-100">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div
           variants={itemVariants}
@@ -45,7 +58,7 @@ const MyTech = () => {
           {/* Title */}
           <div className="text-center mb-10 relative ">
             <h3 className="text-3xl font-bold inline-block">
-              <span className="text-gray-100">My code </span>
+              <span className="text-gray-900">My code </span>
               <span className="text-blue-600"> Stack</span>
             </h3>
             <div className="h-1 w-24 bg-blue-400 mx-auto mt-2 relative -top-1"></div>
@@ -72,6 +85,7 @@ const MyTech = () => {
         </motion.div>
       </div>
     </div>
+    </section>
   );
 };
 
