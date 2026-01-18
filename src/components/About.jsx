@@ -1,4 +1,55 @@
+import { FaGraduationCap, FaCode, FaLightbulb, FaBusinessTime } from "react-icons/fa";
+import { motion } from "framer-motion";
+
 const About = () => {
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        when: "beforeChildren"
+      }
+    }
+  };
+
+
+   const aboutPoints = [
+    {
+      icon: <FaGraduationCap className="text-blue-500 text-3xl" />,
+      title: "Education",
+      content: "12th Commerce from Kendriya Vidyalaya | Pursuing BCA from IGNOU"
+    },
+    {
+      icon: <FaCode className="text-blue-500 text-3xl" />,
+      title: "Experience",
+      content: "3+ years coding experience | 2 years in web development"
+    },
+    {
+      icon: <FaLightbulb className="text-blue-500 text-3xl" />,
+      title: "Approach",
+      content: "Problem solver | Clean code advocate | Continuous learner"
+    },
+    {
+      icon: <FaBusinessTime className="text-blue-500 text-3xl" />,
+      title: "Vision",
+      content: "Combine technical skills with business acumen for impactful solutions"
+    }
+  ];
+
   return (
     <section id="about" className="py-20 bg-gray-100 text-gray-900">
       <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
@@ -58,6 +109,33 @@ const About = () => {
           </p>
         </div>
       </div>
+
+       {/* Key Points Grid */}
+        <div className="w-full bg-gray-200 py-12 md:py-12 mt-16">
+          <div className="container mx-auto px-4 md:px-8">
+            <motion.div 
+              variants={containerVariants}
+              className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            >
+              {aboutPoints.map((point, index) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  className="bg-gray-900 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-900"
+                >
+                  <div className="flex flex-col items-center text-center">
+                    <div className="text-4xl mb-4">
+                      {point.icon}
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-gray-100">{point.title}</h3>
+                    <p className="text-gray-200">{point.content}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
     </section>
   );
 };
