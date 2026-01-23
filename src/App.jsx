@@ -14,6 +14,8 @@ import HirePage from "./hire-me/HirePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import RecentWork from "./components/RecentWork";
 import { HelmetProvider } from 'react-helmet-async';
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import "./App.css";
 
 const App = () => {
@@ -21,6 +23,8 @@ const App = () => {
     <HelmetProvider>
       <Router>
         <div>
+          <Analytics />
+          <SpeedInsights />
           <Routes>
             {/* Main Portfolio Route (with Navbar) */}
             <Route
