@@ -1,4 +1,5 @@
-import { Client, Databases, Query, ID, Storage } from 'appwrite';
+// src/lib/appwrite.js (must be exactly this)
+import { Client, Databases, Storage, Query, ID } from 'appwrite';
 
 const client = new Client()
   .setEndpoint(import.meta.env.VITE_APPWRITE_ENDPOINT)
@@ -7,4 +8,4 @@ const client = new Client()
 const databases = new Databases(client);
 const storage = new Storage(client);
 
-export { databases, Query, ID, storage };
+export { databases, storage, Query, ID };

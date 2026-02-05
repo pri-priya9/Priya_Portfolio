@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   FaCode,
   FaDatabase,
@@ -12,6 +12,12 @@ import { FaLayerGroup, FaUsers, FaAward } from "react-icons/fa";
 
 const Home = () => {
   const [showResume, setShowResume] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
+  const [showAdminModal, setShowAdminModal] = useState(false);
+  const [adminPassword, setAdminPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
   const skills = [
     { name: "Frontend", icon: <FaCode className="text-blue-400 mr-2" /> },
     { name: "Backend", icon: <FaServer className="text-yellow-400 mr-2" /> },
@@ -22,9 +28,66 @@ const Home = () => {
     },
   ];
 
+  // Clear admin session when returning to home page
+  useEffect(() => {
+    sessionStorage.removeItem("passwordVerified");
+    sessionStorage.removeItem("adminAccessGranted");
+  }, []);
+
   const toggleResume = () => {
     setShowResume(!showResume);
   };
+
+  const handleImageClick = () => {
+    const newCount = clickCount + 1;
+    setClickCount(newCount);
+
+    if (newCount === 3) {
+      setShowAdminModal(true);
+      setClickCount(0);
+      document.body.style.overflow = "hidden";
+    }
+
+    // Reset count after 1 second if not reached 3
+    setTimeout(() => {
+      if (newCount < 3) {
+        setClickCount(0);
+      }
+    }, 1000);
+  };
+
+  const handleAdminSubmit = (e) => {
+    e.preventDefault();
+    if (adminPassword === "PrI#*%57") {
+      // Set verification flag
+      sessionStorage.setItem("passwordVerified", "true");
+
+      // Navigate to admin page
+      navigate("/project-admin", {
+        replace: true,
+        state: { accessedThroughPassword: true }, // Additional verification
+      });
+
+      // Reset body overflow
+      document.body.style.overflow = "auto";
+    } else {
+      setError("Incorrect password");
+    }
+  };
+
+  const closeAdminModal = () => {
+    setShowAdminModal(false);
+    setAdminPassword("");
+    setError("");
+    document.body.style.overflow = "auto";
+  };
+
+  useEffect(() => {
+    // Cleanup function to ensure overflow is reset when component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
 
   return (
     <section id="home" className="relative bg-gray-900 text-white py-20 md:py-40">
@@ -37,7 +100,8 @@ const Home = () => {
           <img
             src="/profile.jpg"
             alt="Priya Yadav"
-            className="w-80 md:w-96 h-[420px] md:h-[500px] object-cover shadow-lg rounded-xl"
+            className="w-80 md:w-96 h-[420px] md:h-[500px] object-cover shadow-lg rounded-xl cursor-pointer"
+            onClick={handleImageClick}
           />
         </div>
 
@@ -161,6 +225,53 @@ const Home = () => {
               allowFullScreen
               title="Priya Yadav's Resume"
             ></iframe>
+          </div>
+        </div>
+      )}
+
+      {/* Admin Password Modal */}
+      {showAdminModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div 
+            className="fixed inset-0 bg-black/40 backdrop-blur-md"
+            onClick={closeAdminModal}
+          ></div>
+          
+          <div className="relative w-full max-w-md bg-gray-800 rounded-xl shadow-2xl p-6 border border-gray-700">
+            <button
+              onClick={closeAdminModal}
+              className="absolute top-4 right-4 text-white hover:text-red-400 transition-colors"
+            >
+              <FaTimes className="text-xl" />
+            </button>
+            
+            <h2 className="text-2xl font-bold text-white mb-4">Admin Access</h2>
+            <p className="text-gray-300 mb-6">Enter the admin password to continue</p>
+            
+            <form onSubmit={handleAdminSubmit}>
+              <input
+                type="password"
+                value={adminPassword}
+                onChange={(e) => {
+                  setAdminPassword(e.target.value);
+                  setError("");
+                }}
+                placeholder="Enter password"
+                className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg border border-gray-600 focus:border-blue-500 focus:outline-none mb-4"
+                autoFocus
+              />
+              
+              {error && (
+                <p className="text-red-400 text-sm mb-4">{error}</p>
+              )}
+              
+              <button
+                type="submit"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition duration-300"
+              >
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       )}

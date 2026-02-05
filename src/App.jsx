@@ -7,12 +7,14 @@ import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import MyTech from "./components/MyTech";
+import IndustryProjects from "./components/IndustryProjects";
 //import Services from './components/Services';
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import HirePage from "./hire-me/HirePage";
+import ProjectsAdmin from "./admin/projectAdmin/ProjectAdmin";
+import ProtectedRoute from "./protectedRoute/ProtectedRoute";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import RecentWork from "./components/RecentWork";
 import { HelmetProvider } from 'react-helmet-async';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
@@ -67,7 +69,7 @@ const App = () => {
                   <MyTech />
                   {/* <Skills /> */}
                   <Projects />
-                  <RecentWork />
+                  <IndustryProjects />
                   {/* <Services /> */}
                   <Experience />
                   <Contact />
@@ -97,6 +99,16 @@ const App = () => {
                   <HirePage />
                   <Footer />
                 </>
+              }
+            />
+
+            {/* Admin Route (Protected) */}
+            <Route
+              path="/project-admin"
+              element={
+                <ProtectedRoute>
+                  <ProjectsAdmin />
+                </ProtectedRoute>
               }
             />
           </Routes>
